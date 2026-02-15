@@ -5,21 +5,21 @@
 class Toneclone < Formula
   desc "AI-powered writing assistance from the command line"
   homepage "https://github.com/toneclone/cli"
-  version "1.0.8"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/toneclone/cli/releases/download/v1.0.8/toneclone_darwin_amd64.tar.gz"
-      sha256 "f96e410cbc188246a8c93c6a253e4152bfa6660183a2a62a99d9943ae8ff71fc"
+      url "https://github.com/toneclone/cli/releases/download/v1.1.0/toneclone_darwin_amd64.tar.gz"
+      sha256 "67533f1e28326d1359a03a213d7b25fccb2510aae00a6d459d05630a3c939e9b"
 
       def install
         bin.install "toneclone"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/toneclone/cli/releases/download/v1.0.8/toneclone_darwin_arm64.tar.gz"
-      sha256 "1853b304c31c1a626aaeb07cbf21828fd844ab1fd2ae2b461f275b30230dda2a"
+      url "https://github.com/toneclone/cli/releases/download/v1.1.0/toneclone_darwin_arm64.tar.gz"
+      sha256 "fde96ee4fa958ee825b312904e478da73b07018e5aaae955e75411c4b6e19083"
 
       def install
         bin.install "toneclone"
@@ -29,15 +29,15 @@ class Toneclone < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toneclone/cli/releases/download/v1.0.8/toneclone_linux_amd64.tar.gz"
-      sha256 "242dc9890dbe005a71c19a51346674587b0b86140f3e52c85440c6ff696e29e5"
+      url "https://github.com/toneclone/cli/releases/download/v1.1.0/toneclone_linux_amd64.tar.gz"
+      sha256 "4ce245e7f60eb568db325fc205e9de2a25532cfb4768e5820d2b1866d353af53"
       def install
         bin.install "toneclone"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toneclone/cli/releases/download/v1.0.8/toneclone_linux_arm64.tar.gz"
-      sha256 "fd2da34416ba9dd2c1157fc72391141e1c7bb19af9ffe5d29ade7179ed8eea89"
+      url "https://github.com/toneclone/cli/releases/download/v1.1.0/toneclone_linux_arm64.tar.gz"
+      sha256 "c8f76a2c3add692dd64362f02f928f350e7fdea6575b6b58f0ae55b4a1cb4b35"
       def install
         bin.install "toneclone"
       end
