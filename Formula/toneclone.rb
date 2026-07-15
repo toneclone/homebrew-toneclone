@@ -5,23 +5,23 @@
 class Toneclone < Formula
   desc "AI-powered writing assistance from the command line"
   homepage "https://github.com/toneclone/cli"
-  version "1.1.2"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/toneclone/cli/releases/download/v1.1.2/toneclone_darwin_amd64.tar.gz"
-      sha256 "e41a802c99433239004308aecd46d48b9528271895244bce3750a37eb89aa5f6"
+      url "https://github.com/toneclone/cli/releases/download/v1.2.0/toneclone_darwin_amd64.tar.gz"
+      sha256 "9cb70c303cb763a2407c1b38572597f27994e8860313f779065cabba9de393eb"
 
-      def install
+      define_method(:install) do
         bin.install "toneclone"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/toneclone/cli/releases/download/v1.1.2/toneclone_darwin_arm64.tar.gz"
-      sha256 "f8d70825ec518e7ebfff722ec0ffb652834aa31ed5b0f004633905e15b867920"
+      url "https://github.com/toneclone/cli/releases/download/v1.2.0/toneclone_darwin_arm64.tar.gz"
+      sha256 "03d85027eece682952a33721eb03125568b70310d45bc81cce7a9463ed42202a"
 
-      def install
+      define_method(:install) do
         bin.install "toneclone"
       end
     end
@@ -29,16 +29,16 @@ class Toneclone < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toneclone/cli/releases/download/v1.1.2/toneclone_linux_amd64.tar.gz"
-      sha256 "4635593124a874d6395e3123d88a61dbe1da0401367dc0982fb4a4806606c138"
-      def install
+      url "https://github.com/toneclone/cli/releases/download/v1.2.0/toneclone_linux_amd64.tar.gz"
+      sha256 "f2562c6a8fd0263805a836c3605f3afff612296870d6497b583b2762c4dcecaa"
+      define_method(:install) do
         bin.install "toneclone"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toneclone/cli/releases/download/v1.1.2/toneclone_linux_arm64.tar.gz"
-      sha256 "06aa71ba84cf3600a6283ca949470a5cff8427ac6155e39096be1311262cea48"
-      def install
+      url "https://github.com/toneclone/cli/releases/download/v1.2.0/toneclone_linux_arm64.tar.gz"
+      sha256 "3ce9e838c7f16c256329eb006aadae7dbe722044381b47c173dc841b85560ad9"
+      define_method(:install) do
         bin.install "toneclone"
       end
     end
